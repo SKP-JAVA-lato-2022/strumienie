@@ -1,12 +1,15 @@
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
         boardGames();
+        customers();
+
     }
 
     private static void boardGames(){
@@ -39,8 +42,29 @@ public class Main {
         System.out.println(result);
 
         // gra dla 5 osób z oceną większą niż 8 i ceną mniejszą niż 200
+        games.stream().filter(g -> g.getRating() > 8)
+                .filter(g -> g.getPrice().compareTo(new BigDecimal("200"))<0)
+                .map(g -> g.getName()).forEach(System.out::println);
+
+        // gra o najwyżeszej ocenie zawierająca literę a
+        BoardGame boardGame = games.stream().filter(g ->g.getName().contains("a"))
+                .max(Comparator.comparingDouble(g -> g.getRating())).get();
+        System.out.println(boardGame);
 
 
+
+
+
+    }
+
+    private static void customers(){
+        List<Customer> customers = new ArrayList<>();
+        customers.add(new Customer("Jan", "Kowalski", "Wrocław", 1970));
+        customers.add(new Customer("Jan", "Nowak", "Poznan", 1980));
+        customers.add(new Customer("Mateusz", "Lipnicki", "Wrocław", 1985));
+        customers.add(new Customer("Anna", "Jankowska", "Warszawa", 1973));
+
+        //Pobrać wszystkich klientów z Wrocławia i wyświetlić ich imiona i nazwiska dużymi literami
 
 
     }
