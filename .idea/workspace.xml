@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="690b7a16-d934-4760-b2db-0c6eb43b5ceb" name="Changes" comment="ćwiczenia gry">
-      <change afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+    <list default="true" id="690b7a16-d934-4760-b2db-0c6eb43b5ceb" name="Changes" comment="ćwiczenia klienci">
+      <change afterPath="$PROJECT_DIR$/pliki/f1/dane.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/f2/cos.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/f2/f3/dokument.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/f2/f3/tekst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/r.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -53,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684055379149</updated>
-      <workItem from="1684055380207" duration="3813000" />
+      <workItem from="1684055380207" duration="6570000" />
     </task>
     <task id="LOCAL-00001" summary="ćwiczenia gry">
       <created>1684056700879</created>
@@ -62,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684056700879</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ćwiczenia klienci">
+      <created>1684059463324</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684059463324</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,18 +81,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ćwiczenia gry" />
-    <option name="LAST_COMMIT_MESSAGE" value="ćwiczenia gry" />
+    <MESSAGE value="ćwiczenia klienci" />
+    <option name="LAST_COMMIT_MESSAGE" value="ćwiczenia klienci" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>49</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="4" />
+          <line>74</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

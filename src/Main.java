@@ -1,14 +1,19 @@
+import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        boardGames();
-        customers();
+       // boardGames();
+       // customers();
+       // lazy();
+        files();
 
     }
 
@@ -66,6 +71,43 @@ public class Main {
 
         //Pobrać wszystkich klientów z Wrocławia i wyświetlić ich imiona i nazwiska dużymi literami
 
+        //Klienci według miejscowości (grupowanie)
+        Map<String, List<Customer>> customersByCity =
+                customers.stream().collect(Collectors.groupingBy(c->c.getCity()));
+
+
+        System.out.println(customersByCity);
+
 
     }
+
+    private static void lazy(){
+        IntStream numbersStream = IntStream.range(0, 8);
+        System.out.println("Przed");
+        numbersStream = numbersStream.filter(n -> n % 2 == 0);
+        System.out.println("W trakcie 1");
+        numbersStream = numbersStream.map(n -> {
+            System.out.println("> " + n);
+            return n;
+        });
+        System.out.println("W trakcie 2");
+        numbersStream = numbersStream.limit(2);
+        System.out.println("W trakcie 3");
+        numbersStream.forEach(System.out::println);
+        System.out.println("Po");
+    }
+
+    private static void files(){
+        try(Stream<Path> paths = Files.walk(Paths.get("./pliki"))){
+            List<String> files = paths.map(p ->p.toString())
+                    .filter(p -> p.endsWith(".pdf"))
+                    .collect(Collectors.toList());
+            System.out.println(files);
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
 }
